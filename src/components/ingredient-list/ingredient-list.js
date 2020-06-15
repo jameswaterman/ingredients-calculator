@@ -16,6 +16,7 @@ class IngredientList extends React.Component {
 					<div>
 							{
 								this.props.list.map((ingredient, index) => {
+									ingredient.key = index;
 									return (
 										<Ingredient key={index} 
 										ingredientObject={ingredient}

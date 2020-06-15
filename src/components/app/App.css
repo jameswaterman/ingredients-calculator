@@ -24,7 +24,7 @@ html {
   width: 100%;
   min-height: 100vh;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.45);
 }
 
 .title-font{
@@ -43,9 +43,9 @@ html {
 
 .description {
   font-size: clamp(1rem, 2.2vw, 1.5rem);
-  width: min(800px, 95%);
+  width: min(700px, 95%);
   color: white;
-  text-align: center;
+  text-align: left;
   line-height: 1.3;
   text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5);
 }
@@ -70,6 +70,10 @@ html {
 
   .main-container {
     width: 95%;
+  }
+
+  .body {
+    background-position: left;
   }
 
 }

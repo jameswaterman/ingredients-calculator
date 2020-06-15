@@ -44,30 +44,60 @@ class Form extends React.Component {
 
                 <div className="form-top max-width">
                 	<div className="num-people">
-						<label for="origal-num-people">The original recipe is for:</label>
-						<input type="number" id="origal-num-people" value={this.props.state.origionalPeople} onChange={this.handleOrigionalPeopleChange} onKeyUp={this.handleKeyPress} required></input>
+						<label for="origal-num-people" 
+							className="required">The original recipe is for:</label>
+						<input type="number" 
+							id="origal-num-people" 
+							value={this.props.state.origionalPeople} 
+							onChange={this.handleOrigionalPeopleChange} 
+							onKeyUp={this.handleKeyPress} 
+							required ></input>
 					</div>
 					
 	                <div className="num-people">
-						<label for="new-num-people">New recipe is for:</label>
-						<input type="number" id="new-num-people" value={this.props.state.newPeople} onChange={this.handleNewPeopleChange} onKeyUp={this.handleKeyPress} required/>
+						<label for="new-num-people" 
+							className="required">New recipe is for:</label>
+						<input type="number" 
+							id="new-num-people" 
+							value={this.props.state.newPeople} 
+							onChange={this.handleNewPeopleChange} 
+							onKeyUp={this.handleKeyPress} 
+							required/>
 					</div>
 				</div>
 				
                 <section id="ingredients-container" className="ingredients-container max-width">
                 	<div>
-						<label for="ingredient">Ingredient:</label>
-						<input type="text" id="ingredient" ref={this.ingredientInput} value={this.props.state.ingredient} onChange={this.props.onIngredientsChange} onKeyUp={this.handleKeyPress} required/>
+						<label for="ingredient" 
+							className="required">Ingredient:</label>
+						<input type="text" 
+							id="ingredient" 
+							ref={this.ingredientInput} 
+							value={this.props.state.ingredient} 
+							onChange={this.props.onIngredientsChange} 
+							onKeyUp={this.handleKeyPress} 
+							required/>
 					</div>
                 	<div className="units-container">
 	                	<div>
-							<label for="quantity">Quantity/volume:</label>
-							<input type="number" id="quantity" value={this.props.state.quantity} onChange={this.props.onQuantityChange} onKeyUp={this.handleKeyPress} required/>
+							<label for="quantity" 
+								className="required">Quantity/volume:</label>
+							<input type="number" 
+								id="quantity" 
+								value={this.props.state.quantity} 
+								onChange={this.props.onQuantityChange} 
+								onKeyUp={this.handleKeyPress} 
+								required/>
 				        </div>
 
 				        <div>
 							<label for="unit">Unit:</label>
-							<input type="text" list="units" id="unit" value={this.props.state.units} onChange={this.props.onUnitsChange} onKeyUp={this.handleKeyPress} />
+							<input type="text" 
+								list="units" 
+								id="unit" 
+								value={this.props.state.units} 
+								onChange={this.props.onUnitsChange} 
+								onKeyUp={this.handleKeyPress} />
 							<datalist id="units">
 								<option value="ml"></option>
 								<option value="g"></option>

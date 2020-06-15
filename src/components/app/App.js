@@ -57,7 +57,7 @@ class App extends React.Component {
 
     addIngrediant() {
         if (!this.state.origionalPeople || !this.state.newPeople || !this.state.quantity || !this.state.ingredient) {
-            return alert('Please enter all required fields.');
+            return alert('Please enter all required fields. (*)');
         };
         const ingrediant = {
             origional: this.state.origionalPeople,
@@ -79,7 +79,7 @@ class App extends React.Component {
     }
 
     removeIngredient(ingredientList) {
-        const updateList = this.state.list.filter(ingredients => ingredients.ingredient !== ingredientList.ingredient);
+        const updateList = this.state.list.filter(ingredients => ingredients.key !== ingredientList.key);
         this.setState({list: updateList});
     }
 
@@ -92,7 +92,7 @@ class App extends React.Component {
                     updatedArray.push(ingredient);
                 })
                 this.setState({list: updatedArray})
-            }, 800)
+            }, 300)
         }
     }
 
@@ -106,7 +106,7 @@ class App extends React.Component {
                     updatedArray.push(ingredient);
                 })
                 this.setState({list: updatedArray})
-            }, 800)
+            }, 300)
         }
     }
 
@@ -117,7 +117,7 @@ class App extends React.Component {
                 <div className="body">
                     <div className="overlay">
                         <h1 className="main-title">Ingredients Calculator</h1>
-                        <p className="description center">Add your ingredients below with the amount of people the origional recipe is for and select how many people you would like it for on the right.</p>
+                        <p className="description center">1) Add how many people the original recipe is for.<br/> 2) Then add how many people you would like the recipe to be for.<br/> 3) Finally, add your ingredients and get the updated recipe below.</p>
 
                         <div className="main-container center">
                             <Form
