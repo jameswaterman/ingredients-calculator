@@ -1,0 +1,31 @@
+:root {
+  --main-green: #98EDAC;
+  --grey-background: #ebebeb;
+  --title-font: 'Noto Sans HK', sans-serif;
+}
+
+.new-recipie {
+	text-align: center;
+	min-height: 500px;
+	max-height: 39%;
+	font-size: clamp(1rem, 3vw, 1.4rem);
+	padding-top: max(5px, 1%);
+}
+
+.title {
+	font-size: clamp(1.5rem, 4vw, 2.2rem);
+	border-bottom: 1px solid #A1474F;
+	padding-bottom: max(1%, 6px);
+}
+
+@media only screen and (max-width: 1000px) {
+
+    .new-recipie{
+    	min-height: 200px;
+    	max-height: 39%;
+    }
+
+    .sub-container {
+    width: 98%;
+  }
+}
